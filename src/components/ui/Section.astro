@@ -1,0 +1,19 @@
+---
+interface Props {
+  variant?: 'white' | 'subtle' | 'dark'
+  id?: string
+  class?: string
+}
+
+const { variant = 'white', id, class: className = '' } = Astro.props
+
+const variants = {
+  white: 'py-20 md:py-28 bg-white',
+  subtle: 'py-20 md:py-28 bg-brand-subtle',
+  dark: 'py-20 md:py-28 bg-brand-dark text-white',
+}
+---
+
+<section id={id} class={`${variants[variant]} ${className}`}>
+  <slot />
+</section>

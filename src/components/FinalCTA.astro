@@ -1,0 +1,32 @@
+---
+import Section from '@/components/ui/Section.astro'
+import Container from '@/components/ui/Container.astro'
+import Button from '@/components/ui/Button.astro'
+import { copy } from '@/lib/copy'
+---
+
+<Section variant="dark" id="contact">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-end">
+      <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-none text-white">
+        {copy.finalCta.heading}
+      </h2>
+      <div>
+        <p class="text-base text-gray-400 leading-relaxed max-w-[45ch]">
+          {copy.finalCta.body}
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <Button variant="primary" size="lg" href={copy.finalCta.cta.href}>
+            {copy.finalCta.cta.label}
+          </Button>
+          <a
+            href={copy.finalCta.secondary.href}
+            class="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200"
+          >
+            {copy.finalCta.secondary.label}
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Section>

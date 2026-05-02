@@ -1,0 +1,38 @@
+---
+import '@/styles/globals.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = 'Punesis — Digital Product Consulting & Engineering',
+  description = 'Punesis helps teams ship SaaS MVPs, repair messy codebases, design better product experiences, and turn product data into growth.',
+} = Astro.props
+---
+
+<!doctype html>
+<html lang="en" class="h-full antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="head" />
+  </head>
+  <body class="h-full">
+    <slot />
+  </body>
+</html>

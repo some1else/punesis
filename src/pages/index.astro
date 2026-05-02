@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { copy } from '@/lib/copy'
+import Header from '@/components/Header.astro'
+import Hero from '@/components/Hero.astro'
+import CredibilityStrip from '@/components/CredibilityStrip.astro'
+import Services from '@/components/Services.astro'
+import Benefits from '@/components/Benefits.astro'
+import CaseStudies from '@/components/CaseStudies.astro'
+import Articles from '@/components/Articles.astro'
+import Testimonials from '@/components/Testimonials.astro'
+import FinalCTA from '@/components/FinalCTA.astro'
+import Footer from '@/components/Footer.astro'
+---
+
+<Layout title={copy.site.metaTitle} description={copy.site.metaDescription}>
+  <Header />
+  <main>
+    <Hero />
+    <CredibilityStrip />
+    <Services />
+    <Benefits />
+    <CaseStudies />
+    <Articles />
+    <Testimonials />
+    <FinalCTA />
+  </main>
+  <Footer />
+</Layout>
