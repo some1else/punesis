@@ -14,10 +14,19 @@
   --color-brand-muted:    #6b7280;
   --color-brand-subtle:   #f3f4f6;
   --color-brand-border:   #e5e7eb;
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-geist);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-geist), system-ui, sans-serif;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 32s linear infinite;
 }

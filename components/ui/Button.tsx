@@ -12,7 +12,7 @@ interface ButtonProps {
 }
 
 const base =
-  "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+  "inline-flex items-center justify-center rounded-md font-medium transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-2 focus-visible:outline-offset-2 active:-translate-y-px active:scale-[0.98]"
 
 const variants: Record<ButtonVariant, string> = {
   primary:

@@ -7,23 +7,25 @@ export default function FinalCTA() {
   return (
     <Section variant="dark" id="contact">
       <Container>
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-end">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter leading-none text-white">
             {copy.finalCta.heading}
           </h2>
-          <p className="mt-6 text-lg text-gray-400 leading-relaxed">
-            {copy.finalCta.body}
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button variant="primary" size="lg" href={copy.finalCta.cta.href}>
-              {copy.finalCta.cta.label}
-            </Button>
-            <a
-              href={copy.finalCta.secondary.href}
-              className="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-            >
-              {copy.finalCta.secondary.label}
-            </a>
+          <div>
+            <p className="text-base text-gray-400 leading-relaxed max-w-[45ch]">
+              {copy.finalCta.body}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button variant="primary" size="lg" href={copy.finalCta.cta.href}>
+                {copy.finalCta.cta.label}
+              </Button>
+              <a
+                href={copy.finalCta.secondary.href}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                {copy.finalCta.secondary.label}
+              </a>
+            </div>
           </div>
         </div>
       </Container>
