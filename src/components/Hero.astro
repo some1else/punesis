@@ -1,43 +1,23 @@
 ---
-import Container from '@/components/ui/Container.astro'
-import Button from '@/components/ui/Button.astro'
 import { copy } from '@/lib/copy'
 ---
 
-<section
-  class="relative overflow-hidden min-h-[100dvh] flex flex-col justify-center bg-brand-dark text-white py-24 md:py-32"
->
-  <div
-    class="absolute inset-0 pointer-events-none"
-    style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 72px 72px;"
-    aria-hidden="true"
-  >
-  </div>
-  <div
-    class="absolute top-0 right-1/4 h-full w-px bg-white/5 pointer-events-none hidden md:block"
-    aria-hidden="true"
-  >
+<section class="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-accent-line" aria-hidden="true"></div>
+
+  <p class="hero-label animate-in">{copy.hero.label}</p>
+
+  <h1 class="hero-headline animate-in delay-1">
+    {copy.hero.headlineLead} <em>{copy.hero.headlineEmphasis}</em><br />{copy.hero.headlineTail}
+  </h1>
+
+  <p class="hero-sub animate-in delay-2">{copy.hero.subheadline}</p>
+
+  <div class="hero-actions animate-in delay-3">
+    <a href={copy.hero.ctaPrimary.href} class="btn-primary">{copy.hero.ctaPrimary.label}</a>
+    <a href={copy.hero.ctaSecondary.href} class="btn-ghost">{copy.hero.ctaSecondary.label}</a>
   </div>
 
-  <Container>
-    <div class="relative z-10 max-w-4xl">
-      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent mb-8">
-        Digital product consulting &amp; engineering
-      </p>
-      <h1 class="text-4xl md:text-6xl font-semibold tracking-tighter leading-none text-white">
-        {copy.hero.headline}
-      </h1>
-      <p class="mt-8 text-base text-gray-400 max-w-[55ch] leading-relaxed">
-        {copy.hero.subheadline}
-      </p>
-      <div class="mt-12 flex flex-wrap gap-4">
-        <Button variant="primary" size="lg" href={copy.hero.ctaPrimary.href}>
-          {copy.hero.ctaPrimary.label}
-        </Button>
-        <Button variant="ghost" size="lg" href={copy.hero.ctaSecondary.href}>
-          {copy.hero.ctaSecondary.label}
-        </Button>
-      </div>
-    </div>
-  </Container>
+  <div class="hero-scroll" aria-hidden="true">Scroll</div>
 </section>

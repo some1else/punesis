@@ -1,82 +1,30 @@
 ---
-import Section from '@/components/ui/Section.astro'
-import Container from '@/components/ui/Container.astro'
 import { copy } from '@/lib/copy'
-
-const [featured, ...rest] = copy.articles.items
 ---
 
-<Section id="articles">
-  <Container>
-    <div class="flex items-end justify-between">
-      <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-accent">
-          {copy.articles.sectionLabel}
-        </p>
-        <h2 class="mt-2 text-4xl font-semibold tracking-tighter leading-none text-brand-dark">
-          {copy.articles.heading}
-        </h2>
-      </div>
-      <a
-        href={copy.articles.viewAll.href}
-        class="hidden md:inline-flex text-sm font-medium text-brand-accent hover:text-brand-dark transition-colors"
-      >
-        {copy.articles.viewAll.label} &rarr;
-      </a>
-    </div>
+<section id="thinking" class="blog-section">
+  <div class="section-label">{copy.articles.sectionLabel}</div>
+  <div class="blog-header">
+    <h2 class="section-title">{copy.articles.heading}</h2>
+    <a href={copy.articles.viewAll.href} class="view-all-light">{copy.articles.viewAll.label}</a>
+  </div>
 
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-[3fr_2fr] border-t border-brand-border">
-      <div class="py-8 md:py-10 md:pr-12 md:border-r border-brand-border">
-        <a href={featured.href} class="group block">
-          <div class="flex items-center gap-3 text-xs text-brand-muted">
-            <span>{featured.date}</span>
-            <span aria-hidden="true">&middot;</span>
-            <span>{featured.readTime}</span>
+  <div class="blog-grid">
+    {
+      copy.articles.items.map((article) => (
+        <article class="blog-card" data-reveal>
+          <div class="blog-meta">
+            <span>{article.date}</span>
+            <span aria-hidden="true">·</span>
+            <span>{article.readTime}</span>
           </div>
-          <h3
-            class="mt-4 text-2xl font-semibold tracking-tight text-brand-dark leading-snug group-hover:text-brand-accent transition-colors duration-200"
-          >
-            {featured.title}
+          <h3 class="blog-title">
+            <a href={article.href}>{article.title}</a>
           </h3>
-          <p class="mt-3 text-sm text-brand-muted leading-relaxed max-w-[55ch]">
-            {featured.excerpt}
-          </p>
-          <span
-            class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-brand-accent group-hover:gap-2 transition-all duration-200"
-          >
-            Read article &rarr;
-          </span>
-        </a>
-      </div>
-
-      <div class="flex flex-col divide-y divide-brand-border md:pl-12">
-        {
-          rest.map((article) => (
-            <a href={article.href} class="group block py-8">
-              <div class="flex items-center gap-3 text-xs text-brand-muted">
-                <span>{article.date}</span>
-                <span aria-hidden="true">&middot;</span>
-                <span>{article.readTime}</span>
-              </div>
-              <h3 class="mt-3 text-base font-semibold text-brand-dark leading-snug group-hover:text-brand-accent transition-colors duration-200">
-                {article.title}
-              </h3>
-              <p class="mt-2 text-sm text-brand-muted leading-relaxed line-clamp-2">
-                {article.excerpt}
-              </p>
-            </a>
-          ))
-        }
-      </div>
-    </div>
-
-    <div class="mt-6 md:hidden">
-      <a
-        href={copy.articles.viewAll.href}
-        class="text-sm font-medium text-brand-accent hover:underline"
-      >
-        {copy.articles.viewAll.label} &rarr;
-      </a>
-    </div>
-  </Container>
-</Section>
+          <p class="blog-excerpt">{article.excerpt}</p>
+          <a href={article.href} class="blog-read-more">Read</a>
+        </article>
+      ))
+    }
+  </div>
+</section>

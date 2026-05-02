@@ -1,48 +1,24 @@
 ---
-import Section from '@/components/ui/Section.astro'
-import Container from '@/components/ui/Container.astro'
 import { copy } from '@/lib/copy'
-
-const [featured, ...rest] = copy.testimonials.items
 ---
 
-<Section variant="subtle">
-  <Container>
-    <p class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-accent">
-      {copy.testimonials.sectionLabel}
-    </p>
-    <h2 class="mt-2 text-4xl font-semibold tracking-tighter leading-none text-brand-dark">
-      {copy.testimonials.heading}
-    </h2>
+<section class="testimonials-section">
+  <div class="section-label">{copy.testimonials.sectionLabel}</div>
+  <div class="testimonials-header">
+    <h2 class="section-title">{copy.testimonials.heading}</h2>
+  </div>
 
-    <div class="mt-14">
-      <figure class="border-t border-brand-border pt-10 pb-12">
-        <blockquote
-          class="text-2xl md:text-3xl font-semibold tracking-tight text-brand-dark max-w-3xl leading-snug"
-        >
-          &ldquo;{featured.quote}&rdquo;
-        </blockquote>
-        <figcaption class="mt-6 text-xs font-semibold text-brand-muted uppercase tracking-[0.15em]">
-          &mdash; {featured.author}
-        </figcaption>
-      </figure>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 border-t border-brand-border md:divide-x divide-brand-border"
-      >
-        {
-          rest.map((t, i) => (
-            <figure class={`pt-8 pb-8 md:pb-0 ${i === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-              <blockquote class="text-sm text-brand-dark leading-relaxed">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <figcaption class="mt-4 text-xs font-semibold text-brand-muted uppercase tracking-[0.15em]">
-                &mdash; {t.author}
-              </figcaption>
-            </figure>
-          ))
-        }
-      </div>
-    </div>
-  </Container>
-</Section>
+  <div class="testimonials-grid">
+    {
+      copy.testimonials.items.map((testimonial) => (
+        <figure class="testimonial-card" data-reveal>
+          <blockquote class="testimonial-quote">{testimonial.quote}</blockquote>
+          <figcaption class="testimonial-author">
+            <span class="testimonial-name">{testimonial.name}</span>
+            <span class="testimonial-role">{testimonial.role}</span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>

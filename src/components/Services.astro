@@ -1,34 +1,25 @@
 ---
-import Section from '@/components/ui/Section.astro'
-import Container from '@/components/ui/Container.astro'
 import { copy } from '@/lib/copy'
 ---
 
-<Section id="services">
-  <Container>
-    <div class="flex items-end justify-between">
-      <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-brand-accent">
-          {copy.services.sectionLabel}
-        </p>
-        <h2 class="mt-2 text-4xl font-semibold tracking-tighter leading-none text-brand-dark">
-          {copy.services.heading}
-        </h2>
-      </div>
-    </div>
+<section id="services" class="services-section">
+  <div class="section-label">{copy.services.sectionLabel}</div>
+  <div class="services-header">
+    <h2 class="section-title">{copy.services.heading}</h2>
+    <p class="services-header-note">{copy.services.note}</p>
+  </div>
 
-    <div class="mt-14 divide-y divide-brand-border border-t border-brand-border">
-      {
-        copy.services.items.map((service, i) => (
-          <div class="grid grid-cols-1 md:grid-cols-[72px_1fr_1.6fr] gap-2 md:gap-8 py-7 items-start">
-            <span class="font-mono text-xs text-brand-muted tabular-nums pt-0.5">
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <h3 class="text-sm font-semibold text-brand-dark">{service.name}</h3>
-            <p class="text-sm text-brand-muted leading-relaxed">{service.description}</p>
+  <div class="services-grid">
+    {
+      copy.services.items.map((service, index) => (
+        <article class="service-item" data-reveal>
+          <span class="service-num">{String(index + 1).padStart(2, '0')}</span>
+          <div>
+            <h3 class="service-name">{service.name}</h3>
+            <p class="service-desc">{service.description}</p>
           </div>
-        ))
-      }
-    </div>
-  </Container>
-</Section>
+        </article>
+      ))
+    }
+  </div>
+</section>

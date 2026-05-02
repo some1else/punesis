@@ -1,36 +1,19 @@
 ---
-import Container from '@/components/ui/Container.astro'
 import { copy } from '@/lib/copy'
 ---
 
-<footer class="bg-brand-dark border-t border-white/10">
-  <Container>
-    <div class="py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-      <div>
-        <p class="text-base font-semibold text-white">{copy.site.name}</p>
-        <p class="mt-1 text-sm text-gray-500">{copy.footer.tagline}</p>
-      </div>
-
-      <nav aria-label="Footer navigation">
-        <ul class="flex flex-wrap gap-6">
-          {
-            copy.footer.links.map((link) => (
-              <li>
-                <a
-                  href={link.href}
-                  class="text-sm text-gray-500 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </div>
-
-    <div class="border-t border-white/10 py-6">
-      <p class="text-xs text-gray-600">{copy.footer.copyright}</p>
-    </div>
-  </Container>
+<footer class="site-footer">
+  <a href="/" class="footer-logo">{copy.site.name}</a>
+  <nav aria-label="Footer navigation">
+    <ul class="footer-links">
+      {
+        copy.footer.links.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <span class="footer-copy">{copy.footer.copyright}</span>
 </footer>

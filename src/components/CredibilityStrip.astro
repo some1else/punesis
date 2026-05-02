@@ -5,15 +5,11 @@ const items = copy.credibility.items
 const doubled = [...items, ...items]
 ---
 
-<div class="bg-brand-subtle border-y border-brand-border py-4 overflow-hidden">
-  <div class="flex w-max animate-marquee" aria-label="Capabilities">
+<div class="ticker-wrap" aria-label="Capabilities">
+  <div class="ticker-track">
     {
-      doubled.map((item, i) => (
-        <span
-          class="flex items-center gap-2.5 text-sm font-medium text-brand-muted px-10 whitespace-nowrap"
-          aria-hidden={i >= items.length ? 'true' : undefined}
-        >
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0" aria-hidden="true" />
+      doubled.map((item, index) => (
+        <span class="ticker-item" aria-hidden={index >= items.length ? 'true' : undefined}>
           {item}
         </span>
       ))

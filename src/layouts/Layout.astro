@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'Punesis — Digital Product Consulting & Engineering',
-  description = 'Punesis helps teams ship SaaS MVPs, repair messy codebases, design better product experiences, and turn product data into growth.',
+  title = 'Punesis — Build sharper digital products',
+  description = 'We help founders and product teams move faster, cut waste, and ship work that actually holds up.',
 } = Astro.props
 ---
 
@@ -27,12 +27,49 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300..700;1,300..700&family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <slot name="head" />
   </head>
-  <body class="h-full">
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <slot />
+    <script is:inline>
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+      const menuButton = document.getElementById('menu-toggle')
+      const mobileMenu = document.getElementById('mobile-menu')
+      menuButton?.addEventListener('click', () => {
+        const isOpen = mobileMenu?.classList.toggle('is-open')
+        menuButton.setAttribute('aria-expanded', String(Boolean(isOpen)))
+      })
+
+      mobileMenu?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('is-open')
+          menuButton?.setAttribute('aria-expanded', 'false')
+        })
+      })
+
+      const revealItems = document.querySelectorAll('[data-reveal]')
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'))
+      } else {
+        revealItems.forEach((item) => item.classList.add('reveal-ready'))
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible')
+                observer.unobserve(entry.target)
+              }
+            })
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' },
+        )
+        revealItems.forEach((item) => observer.observe(item))
+      }
+    </script>
   </body>
 </html>

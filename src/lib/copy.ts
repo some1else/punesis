@@ -1,215 +1,209 @@
 export const copy = {
   site: {
-    name: "Punesis",
-    tagline: "Bespoke digital product consulting and engineering.",
-    url: "https://punesis.com",
-    email: "hello@punesis.com",
-    metaTitle: "Punesis — Digital Product Consulting & Engineering",
+    name: 'Punesis',
+    tagline: 'Build sharper digital products.',
+    url: 'https://punesis.com',
+    email: 'hello@punesis.com',
+    metaTitle: 'Punesis — Build sharper digital products',
     metaDescription:
-      "Punesis helps teams ship SaaS MVPs, repair messy codebases, design better product experiences, and turn product data into growth.",
+      'We help founders and product teams move faster, cut waste, and ship work that actually holds up.',
   },
 
   nav: {
     links: [
-      { label: "Services", href: "#services" },
-      { label: "Case Studies", href: "#case-studies" },
-      { label: "Articles", href: "#articles" },
-      { label: "About / Contact", href: "#contact" },
+      { label: 'Services', href: '#services' },
+      { label: 'Work', href: '#work' },
+      { label: 'Thinking', href: '#thinking' },
+      { label: 'About', href: '#about' },
+      { label: 'Contact', href: '#cta' },
     ],
-    cta: { label: "Book a consultation", href: "#contact" },
+    cta: { label: 'Book a call', href: '#cta' },
   },
 
   hero: {
-    headline: "Build sharper digital products.",
+    label: 'Product consulting — since 2018',
+    headlineLead: 'Build',
+    headlineEmphasis: 'sharper',
+    headlineTail: 'digital products.',
     subheadline:
-      "Punesis helps teams ship SaaS MVPs, repair messy codebases, design better product experiences, and turn product data into growth.",
-    ctaPrimary: { label: "Book a consultation", href: "#contact" },
-    ctaSecondary: { label: "See our work", href: "#case-studies" },
+      'We help founders and product teams move faster, cut waste, and ship work that actually holds up. No bloat. No hand-holding. Just results.',
+    ctaPrimary: { label: 'Start a project', href: '#cta' },
+    ctaSecondary: { label: 'See our work', href: '#work' },
   },
 
   credibility: {
     items: [
-      "Full-stack delivery",
-      "Product strategy",
-      "Analytics-led growth",
-      "UX / UI design",
-      "SaaS prototyping",
-      "Codebase rescue",
+      'Product strategy',
+      'MVP development',
+      'UX design',
+      'Technical audits',
+      'Team scaling',
+      'Prototype to production',
+      'Growth engineering',
     ],
   },
 
   services: {
-    sectionLabel: "Services",
-    heading: "What we do",
+    sectionLabel: 'What we do',
+    heading: 'Six ways we move the needle.',
+    note:
+      'We work embedded with your team — or independently. Either way, we operate like owners, not vendors.',
     items: [
       {
-        name: "Full-stack software engineering",
+        name: 'Product strategy & roadmapping',
         description:
-          "Robust web applications, internal tools, APIs, integrations, and production-ready systems.",
+          'Translate ambiguous business goals into a sequenced, defensible product plan. We cut the noise and prioritise what ships value.',
       },
       {
-        name: "SaaS MVP prototyping",
+        name: 'UX & product design',
         description:
-          "Move from idea to validated product quickly, without overbuilding.",
+          'Research-informed design that solves real problems. From zero-to-one wireframes to polished systems ready for engineering.',
       },
       {
-        name: "UX and UI product design",
+        name: 'Technical leadership',
         description:
-          "Clear flows, sharp interfaces, and product experiences that users understand.",
+          'Fractional CTO or lead engineer engagement. Architecture decisions, code reviews, and team direction without the full-time overhead.',
       },
       {
-        name: "Vibe-code doctor",
+        name: 'MVP & rapid prototyping',
         description:
-          "Audit, repair, refactor, and productionize AI-assisted or unstable codebases.",
+          'Get to a testable, fundable product in weeks. We scope tightly, build fast, and skip everything that can wait.',
       },
       {
-        name: "Growth hacking",
+        name: 'Growth & conversion',
         description:
-          "Practical experiments across acquisition, activation, retention, and conversion.",
+          'Funnel analysis, A/B testing, and retention loops built into the product from day one — not bolted on after launch.',
       },
       {
-        name: "Business intelligence",
+        name: 'Embedded team augmentation',
         description:
-          "Dashboards, reporting systems, and decision support for operators.",
-      },
-      {
-        name: "Product and commerce analytics",
-        description:
-          "Funnels, cohorts, attribution, conversion analysis, and actionable product insights.",
+          'Drop a senior designer or engineer into your existing team. They integrate fast, raise the bar, and leave the codebase better than they found it.',
       },
     ],
   },
 
   benefits: {
-    sectionLabel: "Why Punesis",
-    heading: "Senior execution.\nWithout the overhead.",
+    sectionLabel: 'Why Punesis',
+    heading: 'Senior execution.\nWithout the overhead.',
+    intro:
+      'Agencies have too many layers. Junior consultancies cut corners. We sit in neither camp — you get partner-level attention on every engagement, every time.',
     items: [
       {
-        title: "Senior execution without agency overhead",
-        body: "Every engagement is led and delivered by senior practitioners. No juniors learning on your dime.",
+        title: 'No account managers',
+        body: 'The person you speak to is the person doing the work. Every time.',
+        icon: 'check',
       },
       {
-        title: "Strategy and implementation in one place",
-        body: "We don't hand you a report and leave. We scope, design, and build — end to end.",
+        title: 'Fast by design',
+        body: 'We run lean sprints, cut scope ruthlessly, and never pad timelines to justify fees.',
+        icon: 'clock',
       },
       {
-        title: "Fast prototyping with production discipline",
-        body: "Speed where it matters, quality where it counts. We ship fast and build things that last.",
+        title: 'Outcome-focused',
+        body: "Deliverables are a means to an end. We care about what changes in your business, not just what's in the document.",
+        icon: 'triangle',
       },
       {
-        title: "Clean UX, clean code, clean analytics",
-        body: "We don't cut corners in the product, the codebase, or the data layer.",
-      },
-      {
-        title: "Recommendations tied to business outcomes",
-        body: "Every suggestion is grounded in what moves metrics, not what's technically interesting.",
-      },
-      {
-        title: "Flexible support across the stack",
-        body: "Product, engineering, design, growth — bring us in at the stage where you need help most.",
+        title: 'Full-stack perspective',
+        body: 'We speak design, engineering, and product fluently. No translation required between disciplines.',
+        icon: 'orbit',
       },
     ],
   },
 
   caseStudies: {
-    sectionLabel: "Case Studies",
-    heading: "Selected work",
-    viewAll: { label: "View all case studies", href: "/case-studies" },
+    sectionLabel: 'Selected work',
+    heading: "What we've shipped.",
+    viewAll: { label: 'All projects', href: '#work' },
     items: [
       {
-        category: "SaaS MVP prototyping",
-        client: "SaaS MVP from concept to pilot",
-        problem: "A founder with validated demand and no product.",
-        outcome: "Shipped a working B2B SaaS product in 8 weeks. First paying pilot in week 10.",
-        href: "/case-studies/saas-mvp",
+        category: 'Fintech · Product design · 2024',
+        title: 'Redesigned onboarding that cut drop-off by 38%',
+        description:
+          "End-to-end UX overhaul of a payment platform's first-run experience. Research, wireframes, design system, and engineering handoff.",
+        href: '#work',
       },
       {
-        category: "Product and commerce analytics",
-        client: "Commerce analytics cleanup",
-        problem: "A DTC brand with broken tracking, unreliable attribution, and no funnel visibility.",
-        outcome: "Rebuilt the analytics stack, recovered attribution accuracy, and identified a £40k/mo conversion leak.",
-        href: "/case-studies/commerce-analytics",
+        category: 'B2B SaaS · MVP · 2023',
+        title: 'Zero to fundable in 11 weeks',
+        description:
+          'Took a founder from rough concept to a working, demo-ready MVP. Raised a seed round four months later.',
+        href: '#work',
       },
       {
-        category: "Vibe-code doctor",
-        client: "AI-generated codebase stabilization",
-        problem: "A team shipping bugs weekly from an AI-assisted codebase that nobody fully understood.",
-        outcome: "Audited, refactored, and documented the codebase. Deployment incidents dropped to zero within 30 days.",
-        href: "/case-studies/codebase-stabilization",
+        category: 'Marketplace · Strategy · 2023',
+        title: 'Roadmap restructure for a stalled product team',
+        description:
+          'Six weeks embedded with a 12-person team. Diagnosed the bottlenecks, restructured priorities, and unblocked six months of backlog.',
+        href: '#work',
       },
     ],
   },
 
   articles: {
-    sectionLabel: "Articles",
-    heading: "Thinking out loud",
-    viewAll: { label: "See all articles", href: "/articles" },
+    sectionLabel: 'Thinking out loud',
+    heading: "What's on our mind.",
+    viewAll: { label: 'All posts', href: '#thinking' },
     items: [
       {
-        title: "When your MVP is ready for real engineering",
+        title: 'When your MVP is too big to be called an MVP anymore',
         excerpt:
-          "Most teams wait too long — or not long enough. Here are the signals that tell you it's time to stop hacking and start building properly.",
-        date: "April 2025",
-        readTime: "7 min read",
-        href: "/articles/mvp-to-engineering",
+          'The creep is always the same. One "essential" feature leads to another, and suddenly you\'ve spent four months building something nobody\'s used yet.',
+        date: 'Apr 28, 2026',
+        readTime: '5 min read',
+        href: '#thinking',
       },
       {
-        title: "How to tell if your analytics setup is lying to you",
+        title: 'Why most product roadmaps are just wish lists in disguise',
         excerpt:
-          "Broken event tracking, misconfigured attribution, and inflated conversion rates are more common than most teams admit. Here's how to audit what you've got.",
-        date: "March 2025",
-        readTime: "8 min read",
-        href: "/articles/analytics-audit",
-      },
-      {
-        title: "The hidden cost of vibe-coded production apps",
-        excerpt:
-          "AI-assisted code ships fast. It also accrues a different kind of technical debt — one that's harder to see and more expensive to fix at scale.",
-        date: "February 2025",
-        readTime: "6 min read",
-        href: "/articles/vibe-code-cost",
+          "A roadmap without constraints is a fantasy. Here's how we help teams build ones that actually hold up to pressure and change without falling apart.",
+        date: 'Mar 14, 2026',
+        readTime: '7 min read',
+        href: '#thinking',
       },
     ],
   },
 
   testimonials: {
-    sectionLabel: "Testimonials",
-    heading: "From the people we've worked with",
+    sectionLabel: "From the people we've worked with",
+    heading: "Don't take our word for it.",
     items: [
       {
         quote:
-          "Punesis didn't just build the MVP — they asked the right questions first. The product we launched was sharper and smaller than the one we'd planned, and it found paying users faster because of it.",
-        author: "Founder, B2B SaaS company",
+          "Punesis didn't just build the MVP — they scoped the right questions first. The product we launched was sharper and smaller than the one we'd planned, and we found paying more faster because of it.",
+        name: 'Sarah K.',
+        role: 'Co-founder, Series A fintech',
       },
       {
         quote:
-          "We'd been flying blind on attribution for over a year. Within three weeks, Punesis rebuilt our analytics stack and surfaced a funnel problem that was costing us real money every month.",
-        author: "Head of Growth, commerce brand",
+          "I've worked with a lot of consultants. These are the first ones where I felt like they genuinely wanted us to need them less over time. That's a rare thing.",
+        name: 'Marcus T.',
+        role: 'CPO, B2B marketplace',
       },
       {
         quote:
-          "They integrated with our team quickly, didn't make a big deal about the state of the codebase, and just fixed it. No blame, no drama — just cleaner code and fewer incidents.",
-        author: "Product Lead, services marketplace",
+          "The team embedded seamlessly. Within two weeks they were contributing more than people who'd been there for a year. The candour alone was worth the engagement.",
+        name: 'Yemi O.',
+        role: 'CTO, growth-stage SaaS',
       },
     ],
   },
 
   finalCta: {
-    heading: "Have a product problem worth solving?",
-    body: "Bring the messy brief, half-built MVP, broken funnel, or unclear product idea. Punesis will help you find the shortest credible path forward.",
-    cta: { label: "Book a consultation", href: "#contact" },
-    secondary: { label: "hello@punesis.com", href: "mailto:hello@punesis.com" },
+    heading: 'Have a product problem worth solving?',
+    body:
+      "We take on a small number of engagements each quarter. If your problem is real and your timeline is serious, let's talk.",
+    cta: { label: 'Book a call', href: 'mailto:hello@punesis.com' },
   },
 
   footer: {
-    tagline: "Bespoke digital product consulting and engineering.",
     links: [
-      { label: "Services", href: "#services" },
-      { label: "Case Studies", href: "#case-studies" },
-      { label: "Articles", href: "#articles" },
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      { label: 'Services', href: '#services' },
+      { label: 'Work', href: '#work' },
+      { label: 'Thinking', href: '#thinking' },
+      { label: 'About', href: '#about' },
+      { label: 'Contact', href: '#cta' },
     ],
-    copyright: `© ${new Date().getFullYear()} Punesis. All rights reserved.`,
+    copyright: '© 2026 Punesis',
   },
 } as const

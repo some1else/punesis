@@ -1,33 +1,65 @@
 ---
-import Section from '@/components/ui/Section.astro'
-import Container from '@/components/ui/Container.astro'
 import { copy } from '@/lib/copy'
 ---
 
-<Section variant="subtle" id="about">
-  <Container>
-    <p class="text-sm font-semibold uppercase tracking-widest text-brand-accent">
-      {copy.benefits.sectionLabel}
-    </p>
-    <h2 class="mt-2 text-4xl font-semibold tracking-tight text-brand-dark max-w-lg whitespace-pre-line">
-      {copy.benefits.heading}
-    </h2>
+<section id="about" class="value-section">
+  <div class="section-label">{copy.benefits.sectionLabel}</div>
+  <div class="value-header">
+    <h2 class="section-title">{copy.benefits.heading}</h2>
+    <p class="value-header-right">{copy.benefits.intro}</p>
+  </div>
 
-    <dl class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-      {
-        copy.benefits.items.map((item) => (
-          <div class="flex gap-4">
-            <div
-              class="w-1 shrink-0 rounded-full bg-brand-accent mt-1 self-stretch"
-              aria-hidden="true"
-            />
-            <div>
-              <dt class="text-base font-semibold text-brand-dark">{item.title}</dt>
-              <dd class="mt-1 text-sm text-brand-muted leading-relaxed">{item.body}</dd>
-            </div>
-          </div>
-        ))
-      }
-    </dl>
-  </Container>
-</Section>
+  <div class="value-cards">
+    {
+      copy.benefits.items.map((item) => (
+        <article class="value-card" data-reveal>
+          <svg
+            class="value-card-icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            {
+              item.icon === 'check' && (
+                <>
+                  <rect x="4" y="4" width="24" height="24" rx="1" />
+                  <path d="M10 16l4 4 8-8" />
+                </>
+              )
+            }
+            {
+              item.icon === 'clock' && (
+                <>
+                  <circle cx="16" cy="16" r="12" />
+                  <path d="M16 10v6l4 3" />
+                </>
+              )
+            }
+            {
+              item.icon === 'triangle' && (
+                <>
+                  <path d="M4 28L16 4l12 24H4z" />
+                  <path d="M16 16v6" />
+                </>
+              )
+            }
+            {
+              item.icon === 'orbit' && (
+                <>
+                  <path d="M6 16c0-5.5 4.5-10 10-10s10 4.5 10 10" />
+                  <path d="M6 16c0 5.5 4.5 10 10 10" />
+                  <path d="M22 20c.7-1.2 1-2.5 1-4" />
+                  <circle cx="16" cy="16" r="3" />
+                </>
+              )
+            }
+          </svg>
+          <h3 class="value-card-title">{item.title}</h3>
+          <p class="value-card-text">{item.body}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
