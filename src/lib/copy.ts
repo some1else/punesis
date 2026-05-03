@@ -12,8 +12,8 @@ export const copy = {
   nav: {
     links: [
       { label: 'Services', href: '#services' },
-      { label: 'Work', href: '#work' },
-      { label: 'Thinking', href: '#thinking' },
+      // { label: 'Work', href: '#work' },
+      // { label: 'Thinking', href: '#thinking' },
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#cta' },
     ],
@@ -199,8 +199,8 @@ export const copy = {
   footer: {
     links: [
       { label: 'Services', href: '#services' },
-      { label: 'Work', href: '#work' },
-      { label: 'Thinking', href: '#thinking' },
+      // { label: 'Work', href: '#work' },
+      // { label: 'Thinking', href: '#thinking' },
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#cta' },
     ],

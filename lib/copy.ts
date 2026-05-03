@@ -12,8 +12,8 @@ export const copy = {
   nav: {
     links: [
       { label: "Services", href: "#services" },
-      { label: "Case Studies", href: "#case-studies" },
-      { label: "Articles", href: "#articles" },
+      // { label: "Case Studies", href: "#case-studies" },
+      // { label: "Articles", href: "#articles" },
       { label: "About / Contact", href: "#contact" },
     ],
     cta: { label: "Book a consultation", href: "#contact" },
@@ -205,8 +205,8 @@ export const copy = {
     tagline: "Bespoke digital product consulting and engineering.",
     links: [
       { label: "Services", href: "#services" },
-      { label: "Case Studies", href: "#case-studies" },
-      { label: "Articles", href: "#articles" },
+      // { label: "Case Studies", href: "#case-studies" },
+      // { label: "Articles", href: "#articles" },
       { label: "About", href: "#about" },
       { label: "Contact", href: "#contact" },
     ],
