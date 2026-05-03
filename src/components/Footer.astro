@@ -3,17 +3,19 @@ import { copy } from '@/lib/copy'
 ---
 
 <footer class="site-footer">
-  <a href="/" class="footer-logo">{copy.site.name}</a>
-  <nav aria-label="Footer navigation">
-    <ul class="footer-links">
-      {
-        copy.footer.links.map((link) => (
-          <li>
-            <a href={link.href}>{link.label}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
-  <span class="footer-copy">{copy.footer.copyright}</span>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">{copy.site.name}</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        {
+          copy.footer.links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <span class="footer-copy">{copy.footer.copyright}</span>
+  </div>
 </footer>

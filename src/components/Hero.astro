@@ -1,22 +1,29 @@
 ---
 import { copy } from '@/lib/copy'
+
+const [headlineTailFirst, headlineTailSecond] = copy.hero.headlineTail.split(' ')
 ---
 
 <section class="hero">
   <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="hero-accent-line" aria-hidden="true"></div>
 
-  <p class="hero-label animate-in">{copy.hero.label}</p>
+  <div class="hero-inner">
+    <p class="hero-label animate-in">{copy.hero.label}</p>
 
-  <h1 class="hero-headline animate-in delay-1">
-    {copy.hero.headlineLead} <em>{copy.hero.headlineEmphasis}</em><br />{copy.hero.headlineTail}
-  </h1>
+    <h1 class="hero-headline animate-in delay-1">
+      <span>{copy.hero.headlineLead}</span>
+      <em>{copy.hero.headlineEmphasis}</em>
+      <span>{headlineTailFirst}</span>
+      <span>{headlineTailSecond}</span>
+    </h1>
 
-  <p class="hero-sub animate-in delay-2">{copy.hero.subheadline}</p>
+    <p class="hero-sub animate-in delay-2">{copy.hero.subheadline}</p>
 
-  <div class="hero-actions animate-in delay-3">
-    <a href={copy.hero.ctaPrimary.href} class="btn-primary">{copy.hero.ctaPrimary.label}</a>
-    <a href={copy.hero.ctaSecondary.href} class="btn-ghost">{copy.hero.ctaSecondary.label}</a>
+    <div class="hero-actions animate-in delay-3">
+      <a href={copy.hero.ctaPrimary.href} class="btn-primary">{copy.hero.ctaPrimary.label}</a>
+      <a href={copy.hero.ctaSecondary.href} class="btn-ghost">{copy.hero.ctaSecondary.label}</a>
+    </div>
   </div>
 
   <div class="hero-scroll" aria-hidden="true">Scroll</div>

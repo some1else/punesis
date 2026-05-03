@@ -3,22 +3,24 @@ import { copy } from '@/lib/copy'
 ---
 
 <section class="testimonials-section">
-  <div class="section-label">{copy.testimonials.sectionLabel}</div>
-  <div class="testimonials-header">
-    <h2 class="section-title">{copy.testimonials.heading}</h2>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">{copy.testimonials.sectionLabel}</div>
+    <div class="testimonials-header">
+      <h2 class="section-title">{copy.testimonials.heading}</h2>
+    </div>
 
-  <div class="testimonials-grid">
-    {
-      copy.testimonials.items.map((testimonial) => (
-        <figure class="testimonial-card" data-reveal>
-          <blockquote class="testimonial-quote">{testimonial.quote}</blockquote>
-          <figcaption class="testimonial-author">
-            <span class="testimonial-name">{testimonial.name}</span>
-            <span class="testimonial-role">{testimonial.role}</span>
-          </figcaption>
-        </figure>
-      ))
-    }
+    <div class="testimonials-grid">
+      {
+        copy.testimonials.items.map((testimonial) => (
+          <figure class="testimonial-card" data-reveal>
+            <blockquote class="testimonial-quote">{testimonial.quote}</blockquote>
+            <figcaption class="testimonial-author">
+              <span class="testimonial-name">{testimonial.name}</span>
+              <span class="testimonial-role">{testimonial.role}</span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
   </div>
 </section>

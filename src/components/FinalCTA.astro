@@ -3,9 +3,11 @@ import { copy } from '@/lib/copy'
 ---
 
 <section id="cta" class="cta-section">
-  <h2 class="cta-headline">{copy.finalCta.heading}</h2>
-  <div class="cta-right">
-    <p class="cta-sub">{copy.finalCta.body}</p>
-    <a href={copy.finalCta.cta.href} class="btn-cta-white">{copy.finalCta.cta.label}</a>
+  <div class="section-inner cta-inner">
+    <h2 class="cta-headline">{copy.finalCta.heading}</h2>
+    <div class="cta-right">
+      <p class="cta-sub">{copy.finalCta.body}</p>
+      <a href={copy.finalCta.cta.href} class="btn-cta-white">{copy.finalCta.cta.label}</a>
+    </div>
   </div>
 </section>

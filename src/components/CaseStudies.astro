@@ -3,24 +3,26 @@ import { copy } from '@/lib/copy'
 ---
 
 <section id="work" class="work-section">
-  <div class="section-label">{copy.caseStudies.sectionLabel}</div>
-  <div class="work-header">
-    <h2 class="section-title">{copy.caseStudies.heading}</h2>
-    <a href={copy.caseStudies.viewAll.href} class="view-all">{copy.caseStudies.viewAll.label}</a>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">{copy.caseStudies.sectionLabel}</div>
+    <div class="work-header">
+      <h2 class="section-title">{copy.caseStudies.heading}</h2>
+      <a href={copy.caseStudies.viewAll.href} class="view-all">{copy.caseStudies.viewAll.label}</a>
+    </div>
 
-  <div class="work-list">
-    {
-      copy.caseStudies.items.map((item) => (
-        <a href={item.href} class="work-item" data-reveal>
-          <div class="work-item-left">
-            <div class="work-tag">{item.category}</div>
-            <h3 class="work-title">{item.title}</h3>
-            <p class="work-desc">{item.description}</p>
-          </div>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-      ))
-    }
+    <div class="work-list">
+      {
+        copy.caseStudies.items.map((item) => (
+          <a href={item.href} class="work-item" data-reveal>
+            <div class="work-item-left">
+              <div class="work-tag">{item.category}</div>
+              <h3 class="work-title">{item.title}</h3>
+              <p class="work-desc">{item.description}</p>
+            </div>
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </section>

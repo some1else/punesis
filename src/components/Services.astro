@@ -3,23 +3,25 @@ import { copy } from '@/lib/copy'
 ---
 
 <section id="services" class="services-section">
-  <div class="section-label">{copy.services.sectionLabel}</div>
-  <div class="services-header">
-    <h2 class="section-title">{copy.services.heading}</h2>
-    <p class="services-header-note">{copy.services.note}</p>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">{copy.services.sectionLabel}</div>
+    <div class="services-header">
+      <h2 class="section-title">{copy.services.heading}</h2>
+      <p class="services-header-note">{copy.services.note}</p>
+    </div>
 
-  <div class="services-grid">
-    {
-      copy.services.items.map((service, index) => (
-        <article class="service-item" data-reveal>
-          <span class="service-num">{String(index + 1).padStart(2, '0')}</span>
-          <div>
-            <h3 class="service-name">{service.name}</h3>
-            <p class="service-desc">{service.description}</p>
-          </div>
-        </article>
-      ))
-    }
+    <div class="services-grid">
+      {
+        copy.services.items.map((service, index) => (
+          <article class="service-item" data-reveal>
+            <span class="service-num">{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="service-name">{service.name}</h3>
+              <p class="service-desc">{service.description}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>

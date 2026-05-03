@@ -3,28 +3,30 @@ import { copy } from '@/lib/copy'
 ---
 
 <section id="thinking" class="blog-section">
-  <div class="section-label">{copy.articles.sectionLabel}</div>
-  <div class="blog-header">
-    <h2 class="section-title">{copy.articles.heading}</h2>
-    <a href={copy.articles.viewAll.href} class="view-all-light">{copy.articles.viewAll.label}</a>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">{copy.articles.sectionLabel}</div>
+    <div class="blog-header">
+      <h2 class="section-title">{copy.articles.heading}</h2>
+      <a href={copy.articles.viewAll.href} class="view-all-light">{copy.articles.viewAll.label}</a>
+    </div>
 
-  <div class="blog-grid">
-    {
-      copy.articles.items.map((article) => (
-        <article class="blog-card" data-reveal>
-          <div class="blog-meta">
-            <span>{article.date}</span>
-            <span aria-hidden="true">·</span>
-            <span>{article.readTime}</span>
-          </div>
-          <h3 class="blog-title">
-            <a href={article.href}>{article.title}</a>
-          </h3>
-          <p class="blog-excerpt">{article.excerpt}</p>
-          <a href={article.href} class="blog-read-more">Read</a>
-        </article>
-      ))
-    }
+    <div class="blog-grid">
+      {
+        copy.articles.items.map((article) => (
+          <article class="blog-card" data-reveal>
+            <div class="blog-meta">
+              <span>{article.date}</span>
+              <span aria-hidden="true">·</span>
+              <span>{article.readTime}</span>
+            </div>
+            <h3 class="blog-title">
+              <a href={article.href}>{article.title}</a>
+            </h3>
+            <p class="blog-excerpt">{article.excerpt}</p>
+            <a href={article.href} class="blog-read-more">Read</a>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>
