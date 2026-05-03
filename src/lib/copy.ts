@@ -193,7 +193,7 @@ export const copy = {
     heading: 'Have a product problem worth solving?',
     body:
       "We take on a small number of engagements each quarter. If your problem is real and your timeline is serious, let's talk.",
-    cta: { label: 'Book a call', href: 'mailto:hello@punesis.com' },
+    cta: { label: 'Book a call', href: 'https://calendly.com/punesis-inc/30min' },
   },
 
   footer: {
