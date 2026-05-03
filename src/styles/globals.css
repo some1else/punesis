@@ -10,8 +10,8 @@
   --fg-muted-dark: rgba(240, 237, 232, 0.45);
   --fg-light: #0e0c0a;
   --fg-muted-light: rgba(14, 12, 10, 0.45);
-  --accent: oklch(55% 0.22 250);
-  --accent-hover: oklch(60% 0.22 250);
+  --accent: oklch(0.61 0.13 171.26);
+  --accent-hover: oklch(0.48 0.11 170.14);
   --rule-dark: rgba(240, 237, 232, 0.1);
   --rule-light: rgba(14, 12, 10, 0.1);
   --font-head: "Syne", sans-serif;
@@ -373,7 +373,7 @@ a {
   max-width: 420px;
   margin: 28px 0 0;
   color: var(--fg-muted-dark);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.55;
   text-wrap: pretty;
@@ -554,7 +554,7 @@ a {
   max-width: 440px;
   margin: 10px 0 0;
   color: var(--fg-muted-light);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.55;
   text-wrap: pretty;
@@ -627,7 +627,7 @@ a {
 .value-card-text {
   margin: 12px 0 0;
   color: var(--fg-muted-dark);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -895,7 +895,7 @@ a {
   max-width: 520px;
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.65;
   text-wrap: pretty;
@@ -999,7 +999,7 @@ a {
   }
 
   .hero-sub {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .hero-scroll {
