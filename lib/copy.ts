@@ -24,7 +24,7 @@ export const copy = {
     subheadline:
       "Punesis helps teams ship SaaS MVPs, repair messy codebases, design better product experiences, and turn product data into growth.",
     ctaPrimary: { label: "Book a consultation", href: "#contact" },
-    ctaSecondary: { label: "See our work", href: "#case-studies" },
+    ctaSecondary: { label: "Find out more", href: "#services" },
   },
 
   credibility: {

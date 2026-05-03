@@ -28,7 +28,7 @@ export const copy = {
     subheadline:
       'We help founders and product teams move faster, cut waste, and ship work that actually holds up. No bloat. No hand-holding. Just results.',
     ctaPrimary: { label: 'Start a project', href: '#cta' },
-    ctaSecondary: { label: 'See our work', href: '#work' },
+    ctaSecondary: { label: 'Find out more', href: '#services' },
   },
 
   credibility: {
