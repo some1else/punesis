@@ -1,10 +1,10 @@
 export const copy = {
   site: {
-    name: 'Punesis',
+    name: 'PUNESIS',
     tagline: 'Build sharper digital products.',
     url: 'https://punesis.com',
     email: 'hello@punesis.com',
-    metaTitle: 'Punesis — Build sharper digital products',
+    metaTitle: 'PUNESIS — Build sharper digital products',
     metaDescription:
       'We help founders and product teams move faster, cut waste, and ship work that actually holds up.',
   },
@@ -21,12 +21,12 @@ export const copy = {
   },
 
   hero: {
-    label: 'Product consulting — since 2018',
+    label: 'Product consulting — since 2008',
     headlineLead: 'Build',
     headlineEmphasis: 'sharper',
     headlineTail: 'digital products.',
     subheadline:
-      'We help founders and product teams move faster, cut waste, and ship work that actually holds up. No bloat. No hand-holding. Just results.',
+      'We help founders and product teams move faster, cut waste, and ship work that actually holds up. No bloat, just results.',
     ctaPrimary: { label: 'Start a project', href: '#cta' },
     ctaSecondary: { label: 'Find out more', href: '#services' },
   },
@@ -47,65 +47,65 @@ export const copy = {
     sectionLabel: 'What we do',
     heading: 'Six ways we move the needle.',
     note:
-      'We work embedded with your team — or independently. Either way, we operate like owners, not vendors.',
+      'We work embedded or independently. Either way, we act like owners, not vendors.',
     items: [
       {
         name: 'Product strategy & roadmapping',
         description:
-          'Translate ambiguous business goals into a sequenced, defensible product plan. We cut the noise and prioritise what ships value.',
+          'Translate business goals into a sequenced product plan that holds water. We cut the noise and prioritise value.',
       },
       {
         name: 'UX & product design',
         description:
-          'Research-informed design that solves real problems. From zero-to-one wireframes to polished systems ready for engineering.',
+          'Research & design that solves real problems. From wireframes to polished systems ready for implementation.',
       },
       {
         name: 'Technical leadership',
         description:
-          'Fractional CTO or lead engineer engagement. Architecture decisions, code reviews, and team direction without the full-time overhead.',
+          'Get fractional CTO or lead engineer engagement. Architecture, reviews, docs, team management, ...',
       },
       {
         name: 'MVP & rapid prototyping',
         description:
-          'Get to a testable, fundable product in weeks. We scope tightly, build fast, and skip everything that can wait.',
+          'Get to a testable, fundable product in days. We scope tightly, build fast, and skip everything that can wait.',
       },
       {
         name: 'Growth & conversion',
         description:
-          'Funnel analysis, A/B testing, and retention loops built into the product from day one — not bolted on after launch.',
+          'Funnel analysis, A/B testing, and retention loops built into the product from day one, not bolted on after launch.',
       },
       {
         name: 'Embedded team augmentation',
         description:
-          'Drop a senior designer or engineer into your existing team. They integrate fast, raise the bar, and leave the codebase better than they found it.',
+          'Drop a senior designer or engineer into your existing team. They integrate fast, and improve the codebase.',
       },
     ],
   },
 
   benefits: {
-    sectionLabel: 'Why Punesis',
+    sectionLabel: 'Why PUNESIS?',
     heading: 'Senior execution.\nWithout the overhead.',
     intro:
-      'Agencies have too many layers. Junior consultancies cut corners. We sit in neither camp — you get partner-level attention on every engagement, every time.',
+      'Agencies have a bunch of layers. Junior consultancies cut corners. Get partner-level commitment from us instead.',
     items: [
       {
-        title: 'No account managers',
-        body: 'The person you speak to is the person doing the work. Every time.',
+        title: 'No middle mgmt',
+        body: 'The person you speak to is the person doing the work, around the clock.',
         icon: 'check',
       },
       {
         title: 'Fast by design',
-        body: 'We run lean sprints, cut scope ruthlessly, and never pad timelines to justify fees.',
+        body: 'We run lean sprints, cut scope ruthlessly, never pad timelines.',
         icon: 'clock',
       },
       {
-        title: 'Outcome-focused',
-        body: "Deliverables are a means to an end. We care about what changes in your business, not just what's in the document.",
+        title: 'Outcome driven',
+        body: "We care about what's at stake, not just what's in the document.",
         icon: 'triangle',
       },
       {
-        title: 'Full-stack perspective',
-        body: 'We speak design, engineering, and product fluently. No translation required between disciplines.',
+        title: 'E2E perspective',
+        body: 'We speak design, engineering, and product fluently. No silos.',
         icon: 'orbit',
       },
     ],
@@ -170,7 +170,7 @@ export const copy = {
     items: [
       {
         quote:
-          "Punesis didn't just build the MVP — they scoped the right questions first. The product we launched was sharper and smaller than the one we'd planned, and we found paying more faster because of it.",
+          "PUNESIS didn't just build the MVP — they scoped the right questions first. The product we launched was sharper and smaller than the one we'd planned, and we found paying more faster because of it.",
         name: 'Sarah K.',
         role: 'Co-founder, Series A fintech',
       },
@@ -204,6 +204,6 @@ export const copy = {
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#cta' },
     ],
-    copyright: '© 2026 Punesis',
+    copyright: '© 2026 PUNESIS',
   },
 } as const
