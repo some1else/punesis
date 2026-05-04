@@ -4,7 +4,7 @@ export const copy = {
     tagline: 'Build sharper digital products.',
     url: 'https://punesis.com',
     email: 'hello@punesis.com',
-    metaTitle: 'PUNESIS — Build sharper digital products',
+    metaTitle: 'P U N E S I S ・ Build sharper digital products',
     metaDescription:
       'We help founders and product teams move faster, cut waste, and ship work that actually holds up.',
   },
@@ -17,7 +17,7 @@ export const copy = {
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#cta' },
     ],
-    cta: { label: 'Book a call', href: '#cta' },
+    cta: { label: 'Book a call', href: 'https://calendly.com/punesis-inc/30min' },
   },
 
   hero: {
@@ -26,8 +26,8 @@ export const copy = {
     headlineEmphasis: 'sharper',
     headlineTail: 'digital products.',
     subheadline:
-      'We help founders and product teams move faster, cut waste, and ship work that actually holds up. No bloat, just results.',
-    ctaPrimary: { label: 'Start a project', href: '#cta' },
+      'We help founders and product teams move faster, cut waste, and ship work that actually holds up.',
+    ctaPrimary: { label: 'Start a project', href: 'https://calendly.com/punesis-inc/30min' },
     ctaSecondary: { label: 'Find out more', href: '#services' },
   },
 
@@ -84,7 +84,7 @@ export const copy = {
 
   benefits: {
     sectionLabel: 'Why PUNESIS?',
-    heading: 'Senior execution.\nWithout the overhead.',
+    heading: 'All execution,\nzero overhead.',
     intro:
       'Agencies have a bunch of layers. Junior consultancies cut corners. Get partner-level commitment from us instead.',
     items: [
@@ -190,7 +190,7 @@ export const copy = {
   },
 
   finalCta: {
-    heading: 'Have a product problem worth solving?',
+    heading: 'Have a product worth building?',
     body:
       "We take on a small number of engagements each quarter. If your problem is real and your timeline is serious, let's talk.",
     cta: { label: 'Book a call', href: 'https://calendly.com/punesis-inc/30min' },
