@@ -75,7 +75,7 @@ export const copy = {
           'Funnel analysis, A/B testing, and retention loops built into the product from day one, not bolted on after launch.',
       },
       {
-        name: 'Embedded team augmentation',
+        name: 'Embedded talent',
         description:
           'Drop a senior designer or engineer into your existing team. They integrate fast, and improve the codebase.',
       },
